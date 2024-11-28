@@ -11,10 +11,13 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run"
-		"deploy": "npm build && touch ./out/.nojekyll && npm gh-pages -d build -t true"
+		"test": "npm run test:unit -- --run",
+		"predeploy": "npm run build",
+		"deploy": "touch ./build/.nojekyll && gh-pages -d build -t true"
 	},
 	"devDependencies": {
+		"@icons-pack/svelte-simple-icons": "^3.0.0",
+		"@smui/icon-button": "^8.0.0-beta.0",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.6",
 		"@sveltejs/kit": "^2.0.0",
@@ -31,6 +34,7 @@
 		"prettier-plugin-tailwindcss": "^0.6.5",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
+		"svelte-google-materialdesign-icons": "^1.0.5",
 		"tailwindcss": "^3.4.9",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.0.0",
@@ -38,8 +42,11 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@mui/icons-material": "^6.1.9",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.9",
-		"@tailwindcss/typography": "^0.5.15"
+		"@tailwindcss/typography": "^0.5.15",
+		"material-icons": "^1.13.12",
+		"mui": "^0.0.1"
 	}
 }
