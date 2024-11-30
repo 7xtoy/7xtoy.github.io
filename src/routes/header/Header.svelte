@@ -1,3 +1,11 @@
+<script>
+	import logo from '/src/images/logo.png';
+</script>
+
+<div id="top-of-screen-with-name">
+	<h1>7x Toy Story</h1>
+	<img id="logo-img" src={logo} alt="logo"/>
+</div>
 <div id="header">
 	<nav>
 		<ul>
@@ -19,7 +27,7 @@
 		nav {
 				background-color: var(--color-primary);
 				color: var(--color-white);
-				padding: 1rem;
+				padding: 10px;
 		}
 
 		nav ul {
@@ -37,6 +45,12 @@
 				text-decoration: underline;
 		}
 
+		h1 {
+			text-align: center;
+			font-weight: bold;
+			font-size: 2rem;
+		}
+
 
 		@media (max-width: 768px) {
         #header {
@@ -44,6 +58,7 @@
 						bottom: 0;
 						width: 100%;
         }
+
 
 		}
 		@media (min-width: 769px) {
@@ -63,6 +78,28 @@
         li{
             padding: 1rem;
         }
+
+        nav {
+            border-radius: 8px;
+            margin: 10px;
+        }
+		}
+
+		#top-of-screen-with-name {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
+			background-color: var(--color-primary);
+			color: var(--color-white);
+				border-radius: 8px;
+				margin: 10px;
+				gap: 10px
+		}
+		#logo-img {
+			width: 50px;
+			height: 50px;
 		}
 
 </style>

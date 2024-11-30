@@ -16,6 +16,8 @@
 		"deploy": "touch ./build/.nojekyll && gh-pages -d build -t true"
 	},
 	"devDependencies": {
+		"@iconify-json/material-symbols-light": "^1.2.8",
+		"@iconify/svelte": "^4.0.2",
 		"@icons-pack/svelte-simple-icons": "^3.0.0",
 		"@smui/icon-button": "^8.0.0-beta.0",
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -34,7 +36,9 @@
 		"prettier-plugin-tailwindcss": "^0.6.5",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
+		"svelte-feather-icons": "^4.2.0",
 		"svelte-google-materialdesign-icons": "^1.0.5",
+		"svelte-time": "^0.9.0",
 		"tailwindcss": "^3.4.9",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.0.0",
@@ -42,10 +46,13 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@mdi/js": "^7.4.47",
+		"@mdi/react": "^1.6.1",
 		"@mui/icons-material": "^6.1.9",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
+		"arctic": "^2.3.0",
 		"material-icons": "^1.13.12",
 		"mui": "^0.0.1"
 	}
