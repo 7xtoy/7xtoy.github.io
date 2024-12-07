@@ -1,10 +1,22 @@
 <script>
-	import logo from '/src/images/logo.png';
+//	import logo from '/src/images/logo.png';
+	import logo from "$lib/images/Logo.png";
+	import Evenements from "$lib/title/Évènements.png";
+	import Scoreboard from "$lib/title/Scoreboard.png";
 </script>
 
 <div id="top-of-screen-with-name">
-	<h1>7x Toy Story</h1>
+	<!--<h1>7x Toy Story</h1>-->
+
+	<a href="/">
+		<img class="href-image" id="href-evenements" src={Evenements} alt="evenements"/>
+	</a>
 	<img id="logo-img" src={logo} alt="logo"/>
+	<a href="/scoreboard">
+		<img class="href-image" id="href-scoreboard" src={Scoreboard} alt="scoreboard"/>
+	</a>
+
+	<!--<img id="logo-img" src={logo} alt="logo"/>-->
 </div>
 <div id="header">
 	<nav>
@@ -25,7 +37,8 @@
 
 <style>
 		nav {
-				background-color: var(--color-primary);
+				background-color: #96C2EB;
+				box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
 				color: var(--color-white);
 				padding: 10px;
 		}
@@ -51,55 +64,69 @@
 			font-size: 2rem;
 		}
 
-
+		#header{
+			z-index: 100;
+		}
 		@media (max-width: 768px) {
-        #header {
-            position: absolute;
-						bottom: 0;
-						width: 100%;
-        }
+			#header {
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+			}
 
-
+			.href-image {
+				display: none;
+			}
 		}
 		@media (min-width: 769px) {
-				#header {
-						position: absolute;
-						top: 50%;
-						left: 0;
-						transform: translateY(-50%);
-				}
+			#header {
+				display: none;
+			}
 
-        ul{
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-            flex-direction: column;
-        }
-        li{
-            padding: 1rem;
-        }
+			ul{
+				display: flex;
+				justify-content: space-around;
+				list-style: none;
+				flex-direction: column;
+			}
+			li{
+				padding: 1rem;
+			}
 
-        nav {
-            border-radius: 8px;
-            margin: 10px;
-        }
+			nav {
+				border-radius: 8px;
+				margin: 10px;
+			}
 		}
 
 		#top-of-screen-with-name {
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: center;
 			align-items: center;
+			background-color: #96C2EB;
+			width: 100%;
 			padding: 10px;
-			background-color: var(--color-primary);
-			color: var(--color-white);
-				border-radius: 8px;
-				margin: 10px;
-				gap: 10px
+			box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
+			/*mask: radial-gradient(50% 30px at bottom,transparent 99%,black 99%);*/
 		}
 		#logo-img {
+			height: 70px;
+		}
+		.href-image {
+			height: 50px;
+			object-fit: contain;
+			padding: 10px;
+
+		}
+		.href-image:hover {
+			transform: scale(1.1);
+		}
+
+
+		/*#logo-img {
 			width: 50px;
 			height: 50px;
 		}
-
+*/
 </style>

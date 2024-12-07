@@ -23,3 +23,14 @@ npm run dev -- --open
 npm run predeploy
 npm run deploy
 ```
+
+
+# Ajouter un icone
+
+Aller sur: `https://icon-sets.iconify.design`
+Prendre une icone
+Cliquer sur Components
+Cliquer sur Svelte
+Recuperer le truc `<Icon icon="..." width="24" height="24" />`
+Le mettre la ou vous voulez l'icone
+ecrire `import Icon from '@iconify/svelte';` dans la section script (que vous pouvez créer)
